@@ -1,0 +1,62 @@
+
+/*root es un pseudoelemento que puede resguardar variables en css*/
+:root {
+    --theme-main-text: #faf9ff; 
+    --theme-active-text: #fbd606;
+    --theme-main-color: #343353;
+    --theme-button: #ef4e5d; 
+    --theme-button-hover: #ec4152; 
+}
+
+* {
+    box-sizing: border-box; /*Indica que el ancho y el alto del elemento incluirá el borde y el padding.**/
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    /*Fuente y tamaño de línea para establecer la apariencia del texto*/
+    font-family: Arial, sans-serif;
+    line-height: 1.6; 
+}
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 1.6vh 5vw;
+    background-color: var(--theme-main-color);
+
+
+    /*Utilizando flexbox alineamos los elementos horizontalmente y distribuimos el espacio entre ellos*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header > h1 {
+    color: var(--theme-main-text);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/*Se define el estilo para los enlaces del sitio*/
+a {
+    /*Al utilizar la medida rem, consideramos el tamaño letra de todo el documento html, que son 16px.*/
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.active {
+    color: var(--theme-active-text);
+}
+
+nav > a {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: var(--theme-main-text);
+}
